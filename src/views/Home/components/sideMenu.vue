@@ -66,6 +66,7 @@ export default {
             padding-top: 20px;
             padding-bottom: 20px;
             padding-left: 40px !important;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
         }
     }
 </style>

@@ -8,6 +8,7 @@
                   </div>
               </div>
               <side-menu />
+              <side-footer />
            </div>
         </main>
     </div>
@@ -15,10 +16,12 @@
 
 <script>
 import sideMenu from './components/sideMenu.vue'
+import sideFooter from './components/sideFooter.vue'
 export default {
   name: 'Home',
   components: {
-    sideMenu
+    sideMenu,
+    sideFooter
   }
 }
 </script>
