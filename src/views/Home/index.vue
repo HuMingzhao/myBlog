@@ -10,6 +10,7 @@
               <side-menu />
               <side-footer />
            </div>
+           <home-content />
         </main>
     </div>
   </template>
@@ -17,11 +18,13 @@
 <script>
 import sideMenu from './components/sideMenu.vue'
 import sideFooter from './components/sideFooter.vue'
+import homeContent from './components/homeContent.vue'
 export default {
   name: 'Home',
   components: {
     sideMenu,
-    sideFooter
+    sideFooter,
+    homeContent
   }
 }
 </script>
