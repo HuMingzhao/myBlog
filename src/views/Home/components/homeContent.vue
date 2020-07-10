@@ -22,13 +22,15 @@
             <button class="auther-contact">CONTACT ME</button>
           </div>
 
+          <h3><span>Popular Posts</span></h3>
           <ul>
             <li class="post-item" v-for="(item, index) in items" :key="index">
-              <h3>Popular Posts</h3>
-              <div>
+              <div class="post-item-content">
                 <img class="post-avatar" src="https://cdn.heanny.cn/HeadPortrait/moren.gif">
-                <div>
-                  <p class="post-content"></p>
+                <div class="post-right">
+                  <p class="post-content">
+                     Apache 配置https及强制使用443端,Apache 配置https及强制使用443端,Apache 配置https及强制使用443端，Apache 配置https及强制使用443端
+                  </p>
                   <div class="post-time">
                     <i class="el-icon-time"></i>
                     <span>2020-07-09</span>
@@ -62,6 +64,15 @@ export default {
 </script>
 
   <style lang="scss">
+    ul, li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
     .home-content {
       .home-panel-icons {
         position: fixed;
@@ -97,7 +108,7 @@ export default {
       }
 
       .center-menu-drawer {
-        padding: 50px 40px;
+        padding: 10px 40px;
         min-height: 100%;
         box-sizing: border-box;
       }
@@ -127,6 +138,7 @@ export default {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin-bottom: 60px;
 
         .auther-name {
           font-size: 1.75rem;
@@ -167,8 +179,56 @@ export default {
         border-radius: 50%;
         box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
       }
+
+      h3 {
+          border-bottom: 3px solid rgba(0, 0, 0, 0.02);
+
+          span {
+            padding-bottom: 7px;
+            position: relative;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #333333;
+            display: inline-block;
+          }
+          span:after {
+            content: "";
+            height: 3px;
+            width: 100%;
+            background: #51cbce;
+            left: 0;
+            bottom: -3px;
+            position: absolute;
+            z-index: 2;
+          }
+        }
+
       .post-item {
-        margin-bottom: 60px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        .post-item-content {
+          display: flex;
+          align-items: top;
+          justify-content: space-between;
+
+          .post-content {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+          }
+        }
+        .post-avatar {
+          width: 55px;
+          height: 55px;
+          margin-right: 15px;
+        }
+        .post-right {
+          width: calc(100% - 70px)
+        }
+
       }
     }
   </style>
