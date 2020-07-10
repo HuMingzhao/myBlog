@@ -12,6 +12,7 @@
         :visible.sync="drawer"
         wrapperClosable
         :show-close="false"
+        class="drawer-wrapper"
        >
         <div class="center-menu-drawer">
           <button class="close-drawer-btn" @click="drawer=false">×</button>
@@ -107,9 +108,13 @@ export default {
         }
       }
 
+      .drawer-wrapper .el-drawer {
+        height: 100%;
+        overflow-y: auto;
+      }
       .center-menu-drawer {
         padding: 10px 40px;
-        min-height: 100%;
+        overflow-y: auto;
         box-sizing: border-box;
       }
 
