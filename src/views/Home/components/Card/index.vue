@@ -47,10 +47,6 @@ export default {
 </script>
 
 <style lang="scss">
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
     .text-overflow {
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -65,6 +61,23 @@ export default {
         table-layout: fixed;
         width: 100%;
         margin-bottom: 50px;
+        transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+
+        a {
+            color: #51cbce;
+            transition: color 0.2s linear;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: #2ba9cd;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20);
+            transform: translateY(-10px);
+        }
 
         .card-item-left {
             width: 61.8%;
