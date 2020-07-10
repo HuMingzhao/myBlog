@@ -1,6 +1,6 @@
 <template>
     <div class="middle-content-wrapper">
-       <div>
+       <div class="carousel-wrapper">
           <el-carousel
             indicator-position="none"
             height="509px"
@@ -11,15 +11,22 @@
             </el-carousel-item>
           </el-carousel>
        </div>
+       <card />
     </div>
 </template>
 
 <script>
+import card from './Card/index.vue'
 export default {
-  name: 'middleContent'
+  name: 'middleContent',
+  components: {
+    card
+  }
 }
 </script>
 
   <style lang="scss">
-
+    .carousel-wrapper {
+        margin-bottom: 80px;
+    }
   </style>

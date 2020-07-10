@@ -189,8 +189,8 @@ export default {
         border-radius: 50%;
         box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
       }
-
-      h3 {
+      .center-menu-drawer {
+        h3 {
           border-bottom: 3px solid rgba(0, 0, 0, 0.02);
 
           span {
@@ -212,6 +212,7 @@ export default {
             z-index: 2;
           }
         }
+      }
 
       .post-item {
         padding-bottom: 20px;
