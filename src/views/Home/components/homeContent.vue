@@ -8,6 +8,7 @@
             <i class="el-icon-s-fold" @click="drawer = true"></i>
            </li>
        </ul>
+       <middle-content />
        <el-drawer
         :visible.sync="drawer"
         wrapperClosable
@@ -48,8 +49,12 @@
 </template>
 
 <script>
+import middleContent from './middleContent.vue'
 export default {
   name: 'homeContent',
+  components: {
+    middleContent
+  },
   data () {
     return {
       drawer: false,
