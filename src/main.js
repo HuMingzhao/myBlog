@@ -15,7 +15,9 @@ import {
   MenuItemGroup,
   Drawer,
   Carousel,
-  CarouselItem
+  CarouselItem,
+  Row,
+  Col
 } from 'element-ui'
 
 Vue.use(Menu)
@@ -25,6 +27,8 @@ Vue.use(MenuItem)
 Vue.use(Drawer)
 Vue.use(Carousel)
 Vue.use(CarouselItem)
+Vue.use(Row)
+Vue.use(Col)
 
 Vue.directive('highlight', function (el) {
   const blocks = el.querySelectorAll('pre code')

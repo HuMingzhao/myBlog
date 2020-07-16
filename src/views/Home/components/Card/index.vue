@@ -7,9 +7,9 @@
                     <a href="#">新冠状病毒</a>
                 </div>
                 <h3 class="card-title text-overflow">
-                    <a href="">
+                    <router-link to="/blog">
                         <span class="Recommend">【推荐】</span>【心系武汉】疫情实时数据
-                    </a>
+                    </router-link>
                 </h3>
                 <div class="card-content">
                   <p>##心系武汉，关注疫情&amp;lt;iframe height=1080 width=780 src=&amp;quot;https:</p>
