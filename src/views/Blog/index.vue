@@ -1,18 +1,11 @@
 <template>
-    <div class="blog">
-      <el-row :gutter="10">
-        <el-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16">
-          <div class="blog-left">
-            <p v-html="html" v-highlight></p>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
-          <div class="blog-right">
-            right
-          </div>
-        </el-col>
-      </el-row>
+  <div class="blog">
+    <p v-html="html" v-highlight></p>
+    <h2>工作 时间戳处理</h2>
+    <div>
+      <p v-html="html2" v-highlight></p>
     </div>
+  </div>
 </template>
 
 <script>
@@ -33,8 +26,39 @@ export default {
                         hljs.highlightBlock(block)
                       })
                     })`
+
+    const codeStr2 = `
+                    /** 
+                     * 时间戳转化为年 月 日 
+                     *
+                     * @param {*} timestamp ts: 传入时间戳
+                     * @param {*} format 返回格式，支持自定义，但参数必须与formateArr里保持一致
+                     */
+                    function timeFormatTime(timestamp,format){
+                      const formateArr = ['Y', 'M', 'D'];
+                      let returnArr = [];
+
+                      let date = new Date(timestamp);
+                      let year = date.getFullYear()
+                      let month = date.getMonth() + 1
+                      let day = date.getDate()
+                      returnArr.push(year, month, day);  // 得到年-月-日
+
+                      returnArr = returnArr.map(formatNumber);
+
+                      for (var i in returnArr) {
+                          format = format.replace(formateArr[i], returnArr[i]);
+                      }
+                      return format;
+                    }
+                    /* 输出 */
+                    module.exports = {
+                      timeFormatTime:timeFormatTime
+                    }
+    `
     return {
-      html: '<pre><code>' + codeStr + '</code></pre>'
+      html: '<pre><code>' + codeStr + '</code></pre>',
+      html2: '<pre><code>' + codeStr2 + '</code></pre>'
     }
   }
 }
