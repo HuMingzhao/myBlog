@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Layout from '../layout/index.vue'
+import Layout2 from '../layout/index2.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,18 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/gallery',
+    component: Layout2,
+    redirect: '/gallery/pic',
+    children: [{
+      path: '/gallery/pic',
+      name: 'gallery',
+      component: () => import('../views/gallery/index.vue')
+      // meta: { title: '首页', icon: 'fas fa-align-justify' }
+    }
+    ]
   }
 ]
 

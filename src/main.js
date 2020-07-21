@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 import 'element-ui/lib/theme-chalk/index.css'
 import './assets/css/iconfont.css'
 
@@ -17,7 +18,8 @@ import {
   Carousel,
   CarouselItem,
   Row,
-  Col
+  Col,
+  Tooltip
 } from 'element-ui'
 
 Vue.use(Menu)
@@ -29,6 +31,7 @@ Vue.use(Carousel)
 Vue.use(CarouselItem)
 Vue.use(Row)
 Vue.use(Col)
+Vue.use(Tooltip)
 
 Vue.directive('highlight', function (el) {
   const blocks = el.querySelectorAll('pre code')
