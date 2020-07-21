@@ -3,7 +3,7 @@
         <left-bar />
         <main>
             <m-header />
-           <!-- <app-main ref="appMain"/> -->
+           <app-main ref="appMain"/>
         </main>
     </div>
   </template>
@@ -11,11 +11,13 @@
 <script>
 import leftBar from '@/components/leftBar.vue'
 import mHeader from '@/components/header.vue'
+import AppMain from './components/appMain.vue'
 export default {
   name: 'layout2',
   components: {
     leftBar,
-    mHeader
+    mHeader,
+    AppMain
   }
 }
 </script>

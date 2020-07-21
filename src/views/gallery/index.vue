@@ -1,11 +1,15 @@
 <template>
     <div>
-      gallery
+      <self-info />
     </div>
 </template>
 
 <script>
+import selfInfo from './components/selfInfo.vue'
 export default {
-  name: 'Share'
+  name: 'Share',
+  components: {
+    selfInfo
+  }
 }
 </script>
