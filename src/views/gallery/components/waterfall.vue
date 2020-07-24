@@ -2,7 +2,7 @@
   <div id="waterfall-wrap">
      <ul class="waterfall-inner">
        <li class="waterfall-column" :style="{width: (100/column-1) + '%'}" v-for="(it, index) in column" :ref="'column' + index" :key="it">
-         <div class="waterfall-column-item" v-for="(item, i) in goods[it]" :key="i">
+         <div class="waterfall-column-item" v-for="(item, i) in goods[index]" :key="i">
            <img :src="item.imgUrl" style="width: 100%" />
          </div>
        </li>
@@ -37,23 +37,20 @@ export default {
         order: '6',
         imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595332953170&di=60549042953bd8b61efc683a7527dda9&imgtype=0&src=http%3A%2F%2Fi1.sinaimg.cn%2FIT%2F2010%2F0419%2F201041993511.jpg'
       }, {
-        order: '1',
+        order: '7',
         imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595332838610&di=845e593e6c997913d6f9be6a3b37adac&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F05%2F00%2F01300000194285122188000535877.jpg'
       }, {
-        order: '2',
+        order: '8',
         imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595332872091&di=f30d4e17a4ec09be6d1d0dceaa9d84df&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F62%2F02%2F01300542526392139955025309984.jpg'
       }, {
-        order: '3',
+        order: '9',
         imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595332905289&di=751a903831c504f168536de33c47d15a&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F35%2F34%2F19300001295750130986345801104.jpg'
       }, {
-        order: '4',
+        order: '10',
         imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595332925448&di=4fe17347fc960702c52140e26ab9155c&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Frushidao%2Fpics%2Fhv1%2F20%2F108%2F1744%2F113431160.jpg'
       }, {
-        order: '5',
+        order: '11',
         imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595332939972&di=51767f49e974b81204ceed69370bb955&imgtype=0&src=http%3A%2F%2Fa2.att.hudong.com%2F48%2F69%2F01300000169041121120698749544.jpg'
-      }, {
-        order: '6',
-        imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595332953170&di=60549042953bd8b61efc683a7527dda9&imgtype=0&src=http%3A%2F%2Fi1.sinaimg.cn%2FIT%2F2010%2F0419%2F201041993511.jpg'
       }]
     }
   },
@@ -66,7 +63,7 @@ export default {
   methods: {
     getData (data) {
       this.imgArr = data
-      this.formatData(this.imgArr)
+      this.formatData(this.items)
     },
     formatData (data) {
       let lowColumn = 0
@@ -78,12 +75,25 @@ export default {
 
         const tar = this.goods[lowColumn].concat([item])
         this.$set(this.goods, lowColumn, tar)
-        if (lowColumn < this.column) {
+        this.getHeightArr(lowColumn)
+        if (lowColumn < this.column - 1) {
           lowColumn++
         } else {
           lowColumn = 0
         }
       })
+    },
+    getHeightArr (lowColumn) {
+      const newImg = new Image()
+      newImg.src = this.goods[lowColumn][this.goods[lowColumn].length - 1].imgUrl
+      newImg.onload = () => {
+        const arr = document.querySelector('.waterfall-inner').children
+        const heightArr = []
+        for (let i = 0; i < arr.length; i++) {
+          heightArr.push(arr[i].offsetHeight)
+        }
+        console.log(heightArr)
+      }
     },
     getlowHeightColumn () {
       let lowColumn = 0
@@ -101,10 +111,13 @@ export default {
 
 <style>
 .waterfall-inner {
-  display: flex;
-  align-items: top;
+  overflow: hidden;
 }
 .waterfall-column {
   margin-right: 10px;
+  float: left;
+}
+.waterfall-column-item {
+  margin-bottom: 10px;
 }
 </style>
