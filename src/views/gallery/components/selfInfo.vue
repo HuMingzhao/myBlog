@@ -19,6 +19,7 @@ export default {
 <style>
     .self-info-wrap {
       padding: 20px 10px;
+      overflow: hidden;
     }
     .self-info-avatar {
         float: left;

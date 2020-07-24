@@ -3,15 +3,15 @@ const path = require('path')
 module.exports = {
   outputDir: './dist',
   assetsDir: 'assets',
-  // productionSourceMap: false,
-  // devServer: {
-  //     proxy: {
-  //         "/api": {
-  //             target: "http://smtpman.yaitoo.cn"
-  //         }
-  //     },
-  //     port: 8081
-  // },
+  productionSourceMap: false,
+  devServer: {
+    // proxy: {
+    //     "/api": {
+    //         target: "http://smtpman.yaitoo.cn"
+    //     }
+    // },
+    port: 3636
+  },
   configureWebpack: config => {
     Object.assign(config, {
       resolve: {
