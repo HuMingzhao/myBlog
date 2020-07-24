@@ -66,34 +66,42 @@ export default {
       this.formatData(this.items)
     },
     formatData (data) {
-      let lowColumn = 0
-      data.forEach((item) => {
-        // const lowColumn = this.getlowHeightColumn()
-        if (!this.goods[lowColumn]) {
-          this.goods[lowColumn] = []
-        }
+      const test = async () => {
+        let lowColumn = 0
+        for (let i = 0; i < data.length; i++) {
+          if (!this.goods[lowColumn]) {
+            this.goods[lowColumn] = []
+          }
 
-        const tar = this.goods[lowColumn].concat([item])
-        this.$set(this.goods, lowColumn, tar)
-        this.getHeightArr(lowColumn)
-        if (lowColumn < this.column - 1) {
-          lowColumn++
-        } else {
-          lowColumn = 0
+          const tar = this.goods[lowColumn].concat([data[i]])
+          this.$set(this.goods, lowColumn, tar)
+          lowColumn = await this.getHeightArr(lowColumn)
         }
-      })
+      }
+      test()
     },
     getHeightArr (lowColumn) {
-      const newImg = new Image()
-      newImg.src = this.goods[lowColumn][this.goods[lowColumn].length - 1].imgUrl
-      newImg.onload = () => {
-        const arr = document.querySelector('.waterfall-inner').children
-        const heightArr = []
-        for (let i = 0; i < arr.length; i++) {
-          heightArr.push(arr[i].offsetHeight)
+      return new Promise((resolve, reject) => {
+        const newImg = new Image()
+        newImg.src = this.goods[lowColumn][this.goods[lowColumn].length - 1].imgUrl
+        newImg.onload = () => {
+          const arr = document.querySelector('.waterfall-inner').children
+          const heightArr = []
+          for (let i = 0; i < arr.length; i++) {
+            heightArr.push(arr[i].offsetHeight)
+          }
+
+          let min = heightArr[0]
+          let minIndex = 0
+          for (let i = 0; i < heightArr.length; i++) {
+            if (min > heightArr[i]) {
+              min = heightArr[i]
+              minIndex = i
+            }
+          }
+          resolve(minIndex)
         }
-        console.log(heightArr)
-      }
+      })
     },
     getlowHeightColumn () {
       let lowColumn = 0
