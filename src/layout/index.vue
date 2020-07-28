@@ -108,6 +108,7 @@ export default {
           width: 100%;
           height: auto;
           margin-bottom: 60px;
+          overflow-y: hidden;
       }
 
       & {
@@ -119,10 +120,15 @@ export default {
       }
 
       .side-menu {
-        display: none;
+        /* display: none; */
+        max-height: 0;
+        transition: all .5s;
+        opacity: 0;
       }
       .side-menu-active {
-        display: block;
+        /* display: block; */
+        max-height: 600px;
+        opacity: 1;
       }
     }
 
