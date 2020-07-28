@@ -7,8 +7,16 @@
             HMZ - BLOG
           </div>
         </div>
-        <side-menu />
-        <side-footer />
+        <div class="toggle-wrap">
+          <span class="toggle-name">Menu</span>
+          <i class="toggle-icon el-icon-arrow-down" @click="handleToggleClick"></i>
+          <!-- <i class="el-icon-arrow-up"></i> -->
+        </div>
+
+        <div class="side-menu">
+          <side-menu />
+          <side-footer />
+        </div>
       </div>
       <app-main ref="appMain" />
       <!-- <home-content /> -->
@@ -26,6 +34,11 @@ export default {
     sideMenu,
     sideFooter,
     AppMain
+  },
+  methods: {
+    handleToggleClick () {
+      document.querySelector('.side-menu').classList.toggle('side-menu-active')
+    }
   }
 }
 </script>
@@ -53,23 +66,25 @@ export default {
       background-color: #fff;
     }
 
-    @media only screen and (max-width: 999px) {
-      .side-menu-wrapper {
-          position: relative;
-          top: auto;
-          left: auto;
-          right: auto;
-          width: 100%;
-          height: 100%;
-          margin-bottom: 60px;
-      }
+    .toggle-wrap {
+      width: 100%;
+      overflow: hidden;
+      display: none;
+      position: relative;
+      padding: 20px 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      font-size: 1.45rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-sizing: border-box;
 
-      & {
-        padding-left: 0;
+      .toggle-name {
+        float: left;
+      }
+      .toggle-icon {
+        float: right;
       }
     }
-
-    side-menu-wrapper
 
     .logo-wrapper {
       width: 100%;
@@ -83,5 +98,33 @@ export default {
       font-weight: 700;
       text-align: center;
     }
+
+    @media only screen and (max-width: 999px) {
+      .side-menu-wrapper {
+          position: relative;
+          top: auto;
+          left: auto;
+          right: auto;
+          width: 100%;
+          height: auto;
+          margin-bottom: 60px;
+      }
+
+      & {
+        padding-left: 0;
+      }
+
+      .toggle-wrap {
+        display: block;
+      }
+
+      .side-menu {
+        display: none;
+      }
+      .side-menu-active {
+        display: block;
+      }
+    }
+
   }
 </style>

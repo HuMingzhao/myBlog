@@ -114,6 +114,7 @@ export default {
     .drawer-wrapper .el-drawer {
       height: 100%;
       overflow-y: auto;
+      min-width: 420px;
     }
 
     .center-menu-drawer {

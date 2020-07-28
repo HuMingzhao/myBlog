@@ -144,5 +144,15 @@ export default {
             display: table-cell;
             vertical-align: top;
         }
+
+        @media only screen and (max-width: 999px) {
+            .card-item-left,
+            .card-item-right {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
     }
 </style>
