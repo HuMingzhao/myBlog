@@ -31,6 +31,18 @@
             </el-row>
         </div>
     </section>
+
+    <section>
+        <h1>Personal Project</h1>
+        <div class="boxes">
+          <el-row :gutter="10" class="bg-light-white">
+              <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">personal bog - using vue + vuex + element + Koa to create personal website about my resume and leaving message</el-col>
+          </el-row>
+          <el-row :gutter="10" class="bg-light-white">
+            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">personal bog - using vue + vuex + element + Koa to create personal website about my resume and leaving message</el-col>
+         </el-row>
+        </div>
+    </section>
     </main>
   </template>
 
