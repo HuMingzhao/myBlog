@@ -5,6 +5,9 @@
     width="30%"
     :show-close="false"
     center>
+    <div class="login-icon">
+        <i class="el-icon-user-solid"></i>
+    </div>
     <h2>Sign in to HMZ blog</h2>
     <el-form :model="ruleForm" label-position="top" :rules="rules" ref="ruleForm" label-width="100px">
         <el-form-item label="Username" prop="username">
@@ -25,15 +28,15 @@
           <button class="submit-btn" @click="submitForm('ruleForm')">Sign in</button>
         </el-form-item>
     </el-form>
-    <button class="switch-mode" v-if="mode=='login'" @click="goToRegister">go to register</button>
-    <button class="switch-mode" v-if="mode=='register'" @click="mode='login'">go to log in</button>
+    <button class="switch-mode" v-if="mode=='login'" @click="goToRegister">Sign up now</button>
+    <button class="switch-mode" v-if="mode=='register'" @click="mode='login'">Sign in now</button>
   </el-dialog>
 </template>
 
 <script>
 export default {
   name: 'Login',
-  data () {
+  created () {
     var validatePass = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请再次输入密码'))
@@ -43,13 +46,18 @@ export default {
         callback()
       }
     }
+    this.checkPass = [
+      { required: true, message: 'confirm password is required', trigger: 'blur' },
+      { validator: validatePass, trigger: 'blur' }
+    ]
+  },
+  data () {
     return {
       centerDialogVisible: true,
       mode: 'login',
       ruleForm: {
         username: '',
-        password: '',
-        checkPass: ''
+        password: ''
       },
       rules: {
         username: [
@@ -58,20 +66,34 @@ export default {
         ],
         password: [
           { required: true, message: 'password is required', trigger: 'blur' }
-        ],
-        checkPass: [
-          { required: true, message: 'confirm password is required', trigger: 'blur' },
-          { validator: validatePass, trigger: 'blur' }
         ]
       }
     }
   },
   methods: {
-    submitForm () {
-      alert('submit!')
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          console.log('this.ruleForm', this.ruleForm)
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
     },
     goToRegister () {
       this.mode = 'register'
+    }
+  },
+  watch: {
+    mode (val) {
+      this.$refs.ruleForm.resetFields()
+      if (val === 'register') {
+        Object.assign(this.rules, { checkPass: this.checkPass })
+      } else {
+        delete this.rules.checkPass
+        delete this.ruleForm.checkPass
+      }
     }
   }
 }
@@ -79,6 +101,17 @@ export default {
 
 <style lang="scss">
     .login-wrap {
+        .login-icon {
+
+            position: absolute;
+            font-size: 80px;
+            color: rgba(68, 160, 179, .5);
+            left: 50%;
+            top: -40px;
+            margin-left: -40px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
         h2 {
             padding: 0;
             margin: 0;
