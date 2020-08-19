@@ -25,8 +25,8 @@
           <button class="submit-btn" @click="submitForm('ruleForm')">Sign in</button>
         </el-form-item>
     </el-form>
-    <button v-if="mode=='login'" @click="goToRegister">go to register</button>
-    <button v-if="mode=='register'" @click="mode='login'">go to log in</button>
+    <button class="switch-mode" v-if="mode=='login'" @click="goToRegister">go to register</button>
+    <button class="switch-mode" v-if="mode=='register'" @click="mode='login'">go to log in</button>
   </el-dialog>
 </template>
 
@@ -113,6 +113,14 @@ export default {
             -webkit-transition: all .5s;
             -o-transition: all .5s;
             transition: all .5s;
+        }
+        .switch-mode {
+            background: #fff;
+            outline: none;
+            border: none;
+            color: rgba(68, 160, 179, 0.8);
+            display: block;
+            margin: 0 auto;
         }
     }
 </style>
