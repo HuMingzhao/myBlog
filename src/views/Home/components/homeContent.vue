@@ -38,6 +38,17 @@
             </div>
           </li>
         </ul>
+
+        <div class="message-wrap">
+          <h3><span>Leave a message</span></h3>
+          <el-input
+            type="textarea"
+            :rows="2"
+            placeholder="请输入内容"
+            v-model="message">
+          </el-input>
+          <el-button size="small" type="danger">submit</el-button>
+        </div>
       </div>
     </el-drawer>
   </div>
@@ -53,7 +64,8 @@ export default {
   data () {
     return {
       drawer: false,
-      items: [1, 2, 3, 4, 5]
+      items: [1, 2, 3, 4, 5],
+      message: ''
     }
   },
   methods: {
@@ -247,7 +259,16 @@ export default {
       .post-right {
         width: calc(100% - 70px)
       }
+    }
 
+    .message-wrap {
+        .el-textarea {
+          margin-bottom: 10px;
+
+          .el-textarea__inner:focus {
+            border-color: #51cbce;
+          }
+        }
     }
   }
 </style>

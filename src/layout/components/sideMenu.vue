@@ -34,14 +34,13 @@
         </el-menu-item>
         <el-menu-item index="4">
             <i class="el-icon-user-solid"></i>
-            <span slot="title">LOG IN</span>
+            <span slot="title" @click="$store.commit('SET_SHOW_LOGIN', true);">LOG IN</span>
         </el-menu-item>
       </el-menu>
   </template>
 
 <script>
 // @ is an alias to /src
-
 export default {
   name: 'sideMenu',
   methods: {

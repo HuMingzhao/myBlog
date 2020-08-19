@@ -4,6 +4,7 @@
     class="login-wrap"
     width="30%"
     :show-close="false"
+    @close="$refs.ruleForm.resetFields();$store.commit('SET_SHOW_LOGIN', false)"
     center>
     <div class="login-icon">
         <i class="el-icon-user-solid"></i>
@@ -34,6 +35,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'Login',
   created () {
@@ -51,9 +53,14 @@ export default {
       { validator: validatePass, trigger: 'blur' }
     ]
   },
+  computed: {
+    ...mapGetters([
+      'showLogin'
+    ])
+  },
   data () {
     return {
-      centerDialogVisible: true,
+      centerDialogVisible: false,
       mode: 'login',
       ruleForm: {
         username: '',
@@ -83,6 +90,9 @@ export default {
     },
     goToRegister () {
       this.mode = 'register'
+    },
+    showLoginDialog () {
+      this.centerDialogVisible = true
     }
   },
   watch: {
@@ -94,6 +104,9 @@ export default {
         delete this.rules.checkPass
         delete this.ruleForm.checkPass
       }
+    },
+    showLogin (val) {
+      this.centerDialogVisible = val
     }
   }
 }
