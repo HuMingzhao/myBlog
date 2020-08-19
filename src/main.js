@@ -19,7 +19,12 @@ import {
   CarouselItem,
   Row,
   Col,
-  Tooltip
+  Tooltip,
+  Dialog,
+  Button,
+  Form,
+  FormItem,
+  Input
 } from 'element-ui'
 
 Vue.use(Menu)
@@ -32,6 +37,11 @@ Vue.use(CarouselItem)
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Tooltip)
+Vue.use(Dialog)
+Vue.use(Button)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
 
 Vue.directive('highlight', function (el) {
   const blocks = el.querySelectorAll('pre code')

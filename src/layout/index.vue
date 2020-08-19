@@ -7,6 +7,15 @@
             HMZ - BLOG
           </div>
         </div>
+
+        <div class="user-info">
+           <div class="user-avatar-wrap">
+             <img width="100" src="https://thirdqq.qlogo.cn/g?b=oidb&k=UbNEiajdXXAUgiamgTNEBhFg&s=100&t=1483330474" />
+           </div>
+
+           <div class="user-name">sugar</div>
+        </div>
+
         <div class="toggle-wrap">
           <span class="toggle-name">Menu</span>
           <i class="toggle-icon el-icon-arrow-down" @click="handleToggleClick"></i>
@@ -86,16 +95,27 @@ export default {
       }
     }
 
-    .logo-wrapper {
+    .logo-wrapper,
+    .user-info
+     {
       width: 100%;
       padding: 40px;
       box-sizing: border-box;
     }
-
+    .user-info {
+      padding-top: 10px;
+    }
     .logo {
       color: #CC0000;
       font-size: 30px;
       font-weight: 700;
+      text-align: center;
+    }
+    .user-avatar-wrap {
+      margin-bottom: 10px;
+    }
+    .user-avatar-wrap,
+    .user-name {
       text-align: center;
     }
 
