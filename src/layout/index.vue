@@ -120,6 +120,9 @@ export default {
     }
 
     @media only screen and (max-width: 999px) {
+      .home-container {
+        padding: 15px;
+      }
       .side-menu-wrapper {
           position: relative;
           top: auto;

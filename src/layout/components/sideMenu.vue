@@ -6,36 +6,37 @@
         @close="handleClose">
         <el-menu-item index="1">
           <i class="el-icon-s-home"></i>
-          <span slot="title">HOME</span>
+          <!-- <span slot="title">HOME</span> -->
+          <span slot="title"><router-link to="/home">HOME</router-link></span>
         </el-menu-item>
-        <el-menu-item index="2">
+        <!-- <el-menu-item index="2">
           <i class="el-icon-edit"></i>
           <span slot="title">BLOG</span>
-        </el-menu-item>
+        </el-menu-item> -->
         <el-menu-item index="3">
           <i class="el-icon-film"></i>
-          <span slot="title">GALLERIES</span>
+          <span slot="title"><router-link to="/gallery">GALLERIES</router-link></span>
         </el-menu-item>
-        <el-menu-item index="4">
+        <!-- <el-menu-item index="4">
           <i class="el-icon-share"></i>
           <span slot="title">SHARE</span>
-        </el-menu-item>
-        <el-menu-item index="4">
+        </el-menu-item> -->
+        <!-- <el-menu-item index="5">
             <i class="el-icon-notebook-2"></i>
             <span slot="title">GBOOK</span>
-        </el-menu-item>
-        <el-menu-item index="4">
+        </el-menu-item> -->
+        <!-- <el-menu-item index="6">
             <i class="el-icon-link"></i>
             <span slot="title">LINK</span>
-        </el-menu-item>
-        <el-menu-item index="4">
+        </el-menu-item> -->
+        <el-menu-item index="7">
             <i class="el-icon-setting"></i>
-            <span slot="title">ABOUT ME</span>
+            <span slot="title"><router-link to="/resume">ABOUT ME</router-link></span>
         </el-menu-item>
-        <el-menu-item index="4">
+        <!-- <el-menu-item index="4">
             <i class="el-icon-user-solid"></i>
             <span slot="title" @click="$store.commit('SET_SHOW_LOGIN', true);">LOG IN</span>
-        </el-menu-item>
+        </el-menu-item> -->
       </el-menu>
   </template>
 

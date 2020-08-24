@@ -270,5 +270,12 @@ export default {
           }
         }
     }
+
+    @media only screen and (max-width: 768px) {
+      .drawer-wrapper .el-drawer {
+        width: calc(80vw) !important;
+        min-width: initial;
+      }
+    }
   }
 </style>
