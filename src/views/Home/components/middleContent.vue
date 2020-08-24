@@ -2,8 +2,17 @@
   <div class="middle-content-wrapper">
     <div class="carousel-wrapper">
       <el-carousel ref="carousel" indicator-position="none" :height="carouselHeight + 'px'" :autoplay="false">
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3 style="height: 100%;background-color: gray;">{{ item }}</h3>
+        <el-carousel-item>
+          <!--<h3 style="height: 100%;background-color: gray;">{{ item }}</h3>-->
+           <img width="100%" src="../../../assets/img/city.webp" />
+        </el-carousel-item>
+        <el-carousel-item>
+          <!--<h3 style="height: 100%;background-color: gray;">{{ item }}</h3>-->
+           <img width="100%" src="../../../assets/img/sky1.jpg" />
+        </el-carousel-item>
+        <el-carousel-item>
+          <!--<h3 style="height: 100%;background-color: gray;">{{ item }}</h3>-->
+           <img width="100%" src="../../../assets/img/sky2.jpg" />
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -20,7 +29,17 @@ export default {
   },
   data () {
     return {
-      carouselHeight: ''
+      carouselHeight: '',
+      items: [{
+        url: '../../../assets/img/city.webp',
+        name: '1'
+      }, {
+        url: '../../../assets/img/sky1.webp',
+        name: '2'
+      }, {
+        url: '../../../assets/img/sky2.webp',
+        name: '3'
+      }]
     }
   },
   mounted () {

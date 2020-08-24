@@ -16,11 +16,14 @@ export default {
   props: {
     items: {
       default: () => [{
-        url: 'https://img.cdn.heanny.cn/18623246165198.jpg',
+        url: '../assets/img/city.webp',
         name: '1'
       }, {
-        url: 'https://img.cdn.heanny.cn/12312421512.jpg',
+        url: '../assets/img/sky1.webp',
         name: '2'
+      }, {
+        url: '../assets/img/sky2.webp',
+        name: '3'
       }],
       type: Array
     }
