@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'Hello VuePress',
-    description: 'Hello my friend',
+    title: 'HMZ - BLOG',
+    description: 'Welcome to HMZ Blog',
     head: [
         ['link', {
             rel: 'icon',
@@ -13,23 +13,18 @@ module.exports = {
     themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide/' },
-          {
-            text: 'Languages',
-            items: [
-              { text: 'Chinese', link: '/language/chinese' },
-              { text: 'English', link: '/language/english' }
-            ]
-          },
-          { text: 'External', link: 'https://www.baidu.com' },
+          { text: 'Galleries', link: '/#/gallery/pic' },
+          { text: 'About Me', link: '/#/resume' },
         ],
         sidebarDepth: 2,
         sidebar: [
             {
-                title: 'Guide',
-                collapsable: false,
-                children: ['/guide/']
+              title: '项目上线',
+              collapsable: false,
+              children: ['/blog/']
             }         
-        ]
+        ],
+        lastUpdated: 'Last Updated',
+        smoothScroll: true
     }
 }
