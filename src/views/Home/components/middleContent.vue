@@ -3,16 +3,13 @@
     <div class="carousel-wrapper">
       <el-carousel ref="carousel" indicator-position="none" :height="carouselHeight + 'px'" :autoplay="false">
         <el-carousel-item>
-          <!--<h3 style="height: 100%;background-color: gray;">{{ item }}</h3>-->
-           <img width="100%" src="../../../assets/img/city.webp" />
+           <img width="100%" src="@assets/img/sky1.jpg" />
         </el-carousel-item>
         <el-carousel-item>
-          <!--<h3 style="height: 100%;background-color: gray;">{{ item }}</h3>-->
-           <img width="100%" src="../../../assets/img/sky1.jpg" />
+           <img width="100%" src="@assets/img/city.webp" />
         </el-carousel-item>
         <el-carousel-item>
-          <!--<h3 style="height: 100%;background-color: gray;">{{ item }}</h3>-->
-           <img width="100%" src="../../../assets/img/sky2.jpg" />
+           <img width="100%" src="@assets/img/sky2.jpg" />
         </el-carousel-item>
       </el-carousel>
     </div>

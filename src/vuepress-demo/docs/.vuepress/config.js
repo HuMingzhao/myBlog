@@ -1,6 +1,7 @@
 module.exports = {
     title: 'HMZ - BLOG',
     description: 'Welcome to HMZ Blog',
+    base: '/hmzblog/',
     head: [
         ['link', {
             rel: 'icon',
@@ -12,9 +13,9 @@ module.exports = {
     evergreen: true,
     themeConfig: {
         nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Galleries', link: '/#/gallery/pic' },
-          { text: 'About Me', link: '/#/resume' },
+          { text: 'Home', link: 'http://106.52.168.22/#/home' },
+          { text: 'Galleries', link: 'http://106.52.168.22/#/gallery/pic' },
+          { text: 'About Me', link: 'http://106.52.168.22/#/resume' },
         ],
         sidebarDepth: 2,
         sidebar: [

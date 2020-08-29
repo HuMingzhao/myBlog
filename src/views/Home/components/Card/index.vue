@@ -1,39 +1,39 @@
 <template>
     <ul class="card-wrapper">
-        <li class="card-item" v-for="item in 5" :key="item">
+        <li class="card-item">
             <div class="card-item-left">
                 <div class="card-category">
-                    <a href="#">2019-nCoV</a>
-                    <a href="#">新冠状病毒</a>
+                    <a href="#">2020-blog</a>
+                    <a href="#">学习笔记</a>
                 </div>
                 <h3 class="card-title text-overflow">
-                    <router-link to="/blog">
-                        <span class="Recommend">【推荐】</span>【心系武汉】疫情实时数据
-                    </router-link>
+                    <a href="/hmzblog/blog/">
+                        <span class="Recommend">【推荐】</span>【NGINX】项目上线
+                    </a>
                 </h3>
                 <div class="card-content">
-                  <p>##心系武汉，关注疫情&amp;lt;iframe height=1080 width=780 src=&amp;quot;https:</p>
+                  <p>将项目部署到线上的服务器</p>
                 </div>
                 <div class="card-meta">
                     <div class="card-meta-author">
                         By
                         <i class="el-icon-time"></i>
-                        <a class="meta-author-link" href="">Heanny</a>
+                        <a class="meta-author-link" href="javascript:;">Sugar</a>
                     </div>
                     <div class="card-meta-date">
                         <i class="el-icon-time"></i>
-                        <a href="" title="5月前">5月前</a>
+                        <a href="javascript:;" title="5月前">2020/08/20</a>
                     </div>
-                    <div class="card-meta-read">
+                    <!--<div class="card-meta-read">
                         <i class="el-icon-view"></i>
                         1341 read
-                    </div>
+                    </div>-->
                 </div>
             </div>
 
-            <div class="card-item-right" data-img="">
-                <a class="card-featured-img" href="">
-                    <img src="" />
+            <div class="card-item-right">
+                <a class="card-featured-img" href="/hmzblog/blog/">
+                   <img src="@assets/img/timg.jpg" />
                 </a>
             </div>
         </li>
@@ -119,7 +119,7 @@ export default {
 
             .card-meta {
                 font-size: 0.8rem;
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 line-height: 1;
 
                 div {
@@ -143,6 +143,20 @@ export default {
             height: 100%;
             display: table-cell;
             vertical-align: top;
+
+            .card-featured-img {
+                width: 100%;
+                display: block;
+                padding-top: 68.73%;
+                position: relative;
+            }
+            .card-featured-img img {
+                width: 100%;
+                position: absolute;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
         }
 
         @media only screen and (max-width: 999px) {
