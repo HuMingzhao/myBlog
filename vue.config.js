@@ -5,12 +5,8 @@ module.exports = {
   assetsDir: 'assets',
   productionSourceMap: false,
   devServer: {
-    // proxy: {
-    //     "/api": {
-    //         target: "http://smtpman.yaitoo.cn"
-    //     }
-    // },
-    port: 3636
+    host: '192.168.0.106',
+    port: 3636,
   },
   configureWebpack: config => {
     Object.assign(config, {

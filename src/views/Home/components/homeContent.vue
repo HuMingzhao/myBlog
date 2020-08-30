@@ -9,7 +9,51 @@
       </li>
     </ul>
     <middle-content />
-    <el-drawer :visible.sync="drawer" wrapperClosable :show-close="false" class="drawer-wrapper">
+              <h-drawer :visible="drawer">
+            <div slot="h-content">
+              <div class="center-menu-drawer">
+        <button class="close-drawer-btn" @click="drawer=false">×</button>
+        <div class="auther-info">
+          <img class="auther-avatar" src="https://img.cdn.heanny.cn/ww_200.gif" />
+          <span class="auther-name">HMZ</span>
+          <span class="auther-programer-type">web</span>
+          <button class="auther-contact">CONTACT ME</button>
+        </div>
+
+        <h3><span>Popular Posts</span></h3>
+        <ul>
+          <li class="post-item" v-for="(item, index) in items" :key="index">
+            <div class="post-item-content">
+              <img class="post-avatar" src="https://cdn.heanny.cn/HeadPortrait/moren.gif">
+              <div class="post-right">
+                <p class="post-content">
+                  Apache 配置https及强制使用443端,Apache 配置https及强制使用443端,Apache 配置https及强制使用443端，Apache 配置https及强制使用443端
+                </p>
+                <div class="post-time">
+                  <i class="el-icon-time"></i>
+                  <span>2020-07-09</span>
+                  <i class="el-icon-view"></i>
+                  <span>3720</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="message-wrap">
+          <h3><span>Leave a message</span></h3>
+          <el-input
+            type="textarea"
+            :rows="2"
+            placeholder="请输入内容"
+            v-model="message">
+          </el-input>
+          <el-button size="small" type="danger">submit</el-button>
+        </div>
+      </div>
+            </div>
+          </h-drawer>
+   <!-- <el-drawer :visible.sync="drawer" wrapperClosable :show-close="false" class="drawer-wrapper">
       <div class="center-menu-drawer">
         <button class="close-drawer-btn" @click="drawer=false">×</button>
         <div class="auther-info">
@@ -50,16 +94,18 @@
           <el-button size="small" type="danger">submit</el-button>
         </div>
       </div>
-    </el-drawer>
+    </el-drawer>-->
   </div>
 </template>
 
 <script>
 import middleContent from './middleContent.vue'
+import hDrawer from '@/components/h-drawer.vue'
 export default {
   name: 'homeContent',
   components: {
-    middleContent
+    middleContent,
+    hDrawer
   },
   data () {
     return {
@@ -144,12 +190,15 @@ export default {
       font-size: 30px;
       color: #fff;
       background: #f5593d;
+      box-sizing: border-box;
       width: 40px;
       height: 40px;
       line-height: 40px;
       text-align: center;
       transition: background 0.2s ease-in-out;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      padding: 0;
+      margin: 0;
 
       &:hover {
         background: hsl(9, 92%, 52%);
