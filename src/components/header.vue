@@ -43,7 +43,8 @@ export default {
     padding: 0 40px;
     border-bottom: 1px solid #e5e5e5;
     box-shadow: 0 0 10px rgba(0,0,0,.05);
-    height: 80px;
+    /* height: 80px; */
+    overflow: hidden;
 
     .share-header-logo {
         float: left;
@@ -54,6 +55,7 @@ export default {
         padding: 10px 0;
         position: relative;
         z-index: 2;
+        margin: 0;
     }
     .site-desc {
         float: left;
@@ -73,6 +75,18 @@ export default {
         display: inline-block;
         margin-right: 24px;
         padding: 18px 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .share-nav-container {
+            width: 100%;
+
+            .menu-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
     }
 }
 </style>

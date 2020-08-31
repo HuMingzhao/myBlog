@@ -28,8 +28,11 @@ export default {
     padding-left: 80px;
     border-top: 1px solid #fff;
 
-    main {
-
+    @media only screen and (max-width: 768px) {
+         padding-left: 0;
+        .left-nav-wrap {
+          display: none;
+        }
     }
 }
 </style>
