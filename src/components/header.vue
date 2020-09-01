@@ -11,17 +11,14 @@
           </div>
           <div class="nav-wrap">
               <ul class="menu-header">
-                  <li class="">
-                      <a href="#">Home</a>
+                  <li>
+                      <a href="/">Home</a>
                   </li>
-                  <li class="">
-                    <a href="#">Blog</a>
+                  <li>
+                    <a href="/hmzblog/blog/">Blog</a>
                   </li>
-                  <li class="">
-                    <a href="#">Music</a>
-                  </li>
-                  <li class="">
-                    <a href="#">Video</a>
+                  <li>
+                    <a href="/#/resume">About Me</a>
                   </li>
               </ul>
           </div>

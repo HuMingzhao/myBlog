@@ -1,7 +1,7 @@
 <template>
   <div id="waterfall-wrap">
      <ul class="waterfall-inner">
-       <li class="waterfall-column" :style="{width: (100/column-1) + '%'}" v-for="(it, index) in column" :ref="'column' + index" :key="it">
+       <li class="waterfall-column" :style="{width: (100/column-2) + '%'}" v-for="(it, index) in column" :ref="'column' + index" :key="it">
          <div class="waterfall-column-item" v-for="(item, i) in goods[index]" :key="i">
            <img :src="item.imgUrl" style="width: 100%" />
          </div>
@@ -127,5 +127,8 @@ export default {
 }
 .waterfall-column-item {
   margin-bottom: 10px;
+}
+.waterfall-inner .waterfall-column:last-child {
+  margin-right: 0;
 }
 </style>
