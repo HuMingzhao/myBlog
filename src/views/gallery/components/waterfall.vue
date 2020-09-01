@@ -3,7 +3,7 @@
      <ul class="waterfall-inner">
        <li class="waterfall-column" :style="{width: (100/column-2) + '%'}" v-for="(it, index) in column" :ref="'column' + index" :key="it">
          <div class="waterfall-column-item" v-for="(item, i) in goods[index]" :key="i">
-           <img :src="item.imgUrl" style="width: 100%" />
+           <img :src="item.imgUrl" style="width: 100%" class="item-pic" />
          </div>
        </li>
      </ul>
@@ -166,5 +166,23 @@ export default {
 }
 .waterfall-inner .waterfall-column:last-child {
   margin-right: 0;
+}
+.waterfall-inner .item-pic {
+  animation: changeImg .5s;
+}
+
+@keyframes changeImg {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
