@@ -1,5 +1,5 @@
 <template>
-  <div id="waterfall-wrap">
+  <div id="waterfall-wrap" :key="column">
      <ul class="waterfall-inner">
        <li class="waterfall-column" :style="{width: (100/column-2) + '%'}" v-for="(it, index) in column" :ref="'column' + index" :key="it">
          <div class="waterfall-column-item" v-for="(item, i) in goods[index]" :key="i">
@@ -15,7 +15,7 @@ export default {
   name: 'Waterfall',
   data () {
     return {
-      column: 5,
+      column: 0,
       imgArr: [],
       goods: [],
       items: [{
@@ -53,6 +53,10 @@ export default {
         imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595332939972&di=51767f49e974b81204ceed69370bb955&imgtype=0&src=http%3A%2F%2Fa2.att.hudong.com%2F48%2F69%2F01300000169041121120698749544.jpg'
       }]
     }
+  },
+  created () {
+    this.getResizeColum()
+    window.addEventListener('resize', this.getResizeColum)
   },
   mounted () {
     for (let i = 0; i < this.column; i++) {
@@ -112,6 +116,38 @@ export default {
         lowColumn = h2 > h1 ? i + 1 : lowColumn
       }
       return lowColumn
+    },
+    getResizeColum () {
+      const widthArr = [768, 992, 1200, 1920]
+      const curWidth = document.documentElement.clientWidth
+      for (let i = 0; i < widthArr.length - 1; i++) {
+        if (curWidth < widthArr[0]) {
+          this.column = 1
+          break
+        }
+
+        if (curWidth >= widthArr[widthArr.length - 1]) {
+          this.column = 5
+          break
+        }
+
+        if (curWidth <= widthArr[i + 1] && curWidth > widthArr[i]) {
+          this.column = i + 2
+          break
+        }
+      }
+    }
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.getResizeColum)
+  },
+  watch: {
+    column (val) {
+      this.goods = []
+      for (let i = 0; i < this.val; i++) {
+        this.goods[i] = []
+      }
+      this.getData(this.items)
     }
   }
 }
