@@ -9,11 +9,12 @@
         </div>
 
         <div class="user-info">
-           <div class="user-avatar-wrap">
+           <!-- <div class="user-avatar-wrap">
              <img width="100" src="https://thirdqq.qlogo.cn/g?b=oidb&k=UbNEiajdXXAUgiamgTNEBhFg&s=100&t=1483330474" />
            </div>
 
-           <div class="user-name">sugar</div>
+           <div class="user-name">sugar</div> -->
+           <i class="iconfont icon-MusicEntertainment" @click="handleMusicClick"></i>
         </div>
 
         <div class="toggle-wrap">
@@ -47,6 +48,9 @@ export default {
   methods: {
     handleToggleClick () {
       document.querySelector('.side-menu').classList.toggle('side-menu-active')
+    },
+    handleMusicClick () {
+      document.querySelector('.icon-MusicEntertainment').classList.toggle('music-stop')
     }
   }
 }
@@ -104,6 +108,9 @@ export default {
     }
     .user-info {
       padding-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .logo {
       color: #CC0000;
@@ -117,6 +124,30 @@ export default {
     .user-avatar-wrap,
     .user-name {
       text-align: center;
+    }
+    .icon-MusicEntertainment {
+      font-size: 130px;
+      animation: rotateMusic 3s linear infinite;
+      display: inline-block;
+      transform-origin: center center;
+    }
+    .music-stop {
+      animation-play-state:paused;
+    }
+    .music-play {
+      animation-play-state:running;
+    }
+
+    @keyframes rotateMusic {
+      /* 0% {
+        transform: rotate(0deg);
+      } */
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     @media only screen and (max-width: 999px) {
