@@ -1,8 +1,8 @@
 <template>
   <ul class="side-footer-wrapper">
       <li v-for="item in icons" :key="item">
-          <a href="#">
-              <i class="iconfont" :class="item"></i>
+          <a :href="item.url" :target="item.url == 'javascript:void(0)' ? '' : '_blank'">
+              <i class="iconfont" :class="item.class"></i>
           </a>
       </li>
   </ul>
@@ -13,13 +13,22 @@ export default {
   name: 'sideFooter',
   data () {
     return {
-      icons: [
-        'icon-qq',
-        'icon-weibo',
-        'icon-twitter',
-        'icon-github',
-        'icon-185078emailmailstreamline'
-      ]
+      icons: [{
+        class: 'icon-qq',
+        url: 'javascript:void(0)'
+      }, {
+        class: 'icon-weibo',
+        url: 'javascript:void(0)'
+      }, {
+        class: 'icon-twitter',
+        url: 'javascript:void(0)'
+      }, {
+        class: 'icon-github',
+        url: 'https://github.com/HuMingzhao'
+      }, {
+        class: 'icon-185078emailmailstreamline',
+        url: 'mailto:821547297@qq.com'
+      }]
     }
   }
 }
