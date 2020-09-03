@@ -1,100 +1,63 @@
 <template>
   <div class="home-content">
     <ul class="home-panel-icons">
-      <li>
+      <!-- <li>
         <i class="el-icon-search"></i>
-      </li>
+      </li> -->
       <li>
         <i class="el-icon-s-fold" @click="drawer = true"></i>
       </li>
     </ul>
     <middle-content />
-              <h-drawer :visible="drawer">
-            <div slot="h-content">
-              <div class="center-menu-drawer">
-        <button class="close-drawer-btn" @click="drawer=false">×</button>
-        <div class="auther-info">
-          <img class="auther-avatar" src="https://img.cdn.heanny.cn/ww_200.gif" />
-          <span class="auther-name">HMZ</span>
-          <span class="auther-programer-type">web</span>
-          <button class="auther-contact">CONTACT ME</button>
-        </div>
+    <h-drawer :visible="drawer">
+      <div slot="h-content">
+        <div class="center-menu-drawer">
+          <button class="close-drawer-btn" @click="drawer=false">×</button>
+          <div class="auther-info">
+            <img class="auther-avatar" src="https://img.cdn.heanny.cn/ww_200.gif" />
+            <span class="auther-name">HMZ</span>
+            <span class="auther-programer-type">web</span>
+            <button class="auther-contact" @click="handleContactMe">CONTACT ME</button>
+          </div>
 
-        <h3><span>Popular Posts</span></h3>
-        <ul>
-          <li class="post-item" v-for="(item, index) in items" :key="index">
-            <div class="post-item-content">
-              <img class="post-avatar" src="https://cdn.heanny.cn/HeadPortrait/moren.gif">
-              <div class="post-right">
-                <p class="post-content">
-                  Apache 配置https及强制使用443端,Apache 配置https及强制使用443端,Apache 配置https及强制使用443端，Apache 配置https及强制使用443端
-                </p>
-                <div class="post-time">
-                  <i class="el-icon-time"></i>
-                  <span>2020-07-09</span>
-                  <i class="el-icon-view"></i>
-                  <span>3720</span>
+          <h3><span>Wechat & QQ</span></h3>
+          <ul>
+            <li class="post-item" v-for="(item, index) in items" :key="index">
+              <div class="post-item-content">
+                <img src="" alt="Wechat">
+              </div>
+            </li>
+          </ul>
+
+          <!-- <h3><span>Popular Posts</span></h3>
+          <ul>
+            <li class="post-item" v-for="(item, index) in items" :key="index">
+              <div class="post-item-content">
+                <img class="post-avatar" src="https://cdn.heanny.cn/HeadPortrait/moren.gif">
+                <div class="post-right">
+                  <p class="post-content">
+                    Apache 配置https及强制使用443端,Apache 配置https及强制使用443端,Apache 配置https及强制使用443端，Apache 配置https及强制使用443端
+                  </p>
+                  <div class="post-time">
+                    <i class="el-icon-time"></i>
+                    <span>2020-07-09</span>
+                    <i class="el-icon-view"></i>
+                    <span>3720</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul> -->
 
-        <div class="message-wrap">
-          <h3><span>Leave a message</span></h3>
-          <el-input
-            type="textarea"
-            :rows="2"
-            placeholder="请输入内容"
-            v-model="message">
-          </el-input>
-          <el-button size="small" type="danger">submit</el-button>
+          <!-- <div class="message-wrap">
+            <h3><span>Leave a message</span></h3>
+            <el-input type="textarea" :rows="2" placeholder="请输入内容" v-model="message">
+            </el-input>
+            <el-button size="small" type="danger">submit</el-button>
+          </div> -->
         </div>
       </div>
-            </div>
-          </h-drawer>
-   <!-- <el-drawer :visible.sync="drawer" wrapperClosable :show-close="false" class="drawer-wrapper">
-      <div class="center-menu-drawer">
-        <button class="close-drawer-btn" @click="drawer=false">×</button>
-        <div class="auther-info">
-          <img class="auther-avatar" src="https://img.cdn.heanny.cn/ww_200.gif" />
-          <span class="auther-name">HMZ</span>
-          <span class="auther-programer-type">web</span>
-          <button class="auther-contact">CONTACT ME</button>
-        </div>
-
-        <h3><span>Popular Posts</span></h3>
-        <ul>
-          <li class="post-item" v-for="(item, index) in items" :key="index">
-            <div class="post-item-content">
-              <img class="post-avatar" src="https://cdn.heanny.cn/HeadPortrait/moren.gif">
-              <div class="post-right">
-                <p class="post-content">
-                  Apache 配置https及强制使用443端,Apache 配置https及强制使用443端,Apache 配置https及强制使用443端，Apache 配置https及强制使用443端
-                </p>
-                <div class="post-time">
-                  <i class="el-icon-time"></i>
-                  <span>2020-07-09</span>
-                  <i class="el-icon-view"></i>
-                  <span>3720</span>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-        <div class="message-wrap">
-          <h3><span>Leave a message</span></h3>
-          <el-input
-            type="textarea"
-            :rows="2"
-            placeholder="请输入内容"
-            v-model="message">
-          </el-input>
-          <el-button size="small" type="danger">submit</el-button>
-        </div>
-      </div>
-    </el-drawer>-->
+    </h-drawer>
   </div>
 </template>
 
@@ -115,6 +78,9 @@ export default {
     }
   },
   methods: {
+    handleContactMe () {
+      location.href = 'mailto:821547297@qq.com'
+    },
     handleClose () {
       console.log('closed')
     }
@@ -311,13 +277,13 @@ export default {
     }
 
     .message-wrap {
-        .el-textarea {
-          margin-bottom: 10px;
+      .el-textarea {
+        margin-bottom: 10px;
 
-          .el-textarea__inner:focus {
-            border-color: #51cbce;
-          }
+        .el-textarea__inner:focus {
+          border-color: #51cbce;
         }
+      }
     }
 
     @media only screen and (max-width: 768px) {

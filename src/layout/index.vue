@@ -14,6 +14,7 @@
            </div>
 
            <div class="user-name">sugar</div> -->
+           <audio src=""></audio>
            <i class="iconfont icon-MusicEntertainment" @click="handleMusicClick"></i>
         </div>
 
@@ -45,12 +46,21 @@ export default {
     sideFooter,
     AppMain
   },
+  mounted () {
+    this.video = document.getElementsByTagName('audio')[0]
+    this.video.play()
+  },
   methods: {
     handleToggleClick () {
       document.querySelector('.side-menu').classList.toggle('side-menu-active')
     },
     handleMusicClick () {
       document.querySelector('.icon-MusicEntertainment').classList.toggle('music-stop')
+      if (this.video.paused) {
+        this.video.play()
+      } else {
+        this.video.pause()
+      }
     }
   }
 }

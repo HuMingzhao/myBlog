@@ -1,6 +1,6 @@
 <template>
   <ul class="side-footer-wrapper">
-      <li v-for="item in icons" :key="item">
+      <li v-for="item in icons" :key="item.class">
           <a :href="item.url" :target="item.url == 'javascript:void(0)' ? '' : '_blank'">
               <i class="iconfont" :class="item.class"></i>
           </a>
