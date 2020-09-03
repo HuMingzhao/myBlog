@@ -6,7 +6,7 @@
            <img width="100%" src="@assets/img/sky1.jpg" />
            <transition name="fade">
             <div v-if="currentIndex===0" class="carousel-text" style="background-color: #fff;position: absolute;">
-              Yesterday i saw a lion kiss a dear
+              Yesterday i saw a lion kiss a deer
             </div>
            </transition>
         </el-carousel-item>
@@ -14,7 +14,7 @@
            <img width="100%" src="@assets/img/city.webp" />
            <transition name="fade">
             <div v-if="currentIndex===1" class="carousel-text" style="background-color: #fff;position: absolute;">
-              Yesterday i saw a lion kiss a dear
+              Yesterday i saw a lion kiss a deer
             </div>
            </transition>
         </el-carousel-item>
@@ -22,7 +22,7 @@
            <img width="100%" src="@assets/img/sky2.jpg" />
            <transition name="fade">
             <div v-if="currentIndex===2" class="carousel-text" style="background-color: #fff;position: absolute;">
-              Yesterday i saw a lion kiss a dear
+              Yesterday i saw a lion kiss a deer
             </div>
            </transition>
         </el-carousel-item>

@@ -10,7 +10,7 @@
     </ul>
     <middle-content />
     <h-drawer :visible="drawer">
-      <div slot="h-content">
+      <div slot="h-content" class="drawer-inner">
         <div class="center-menu-drawer">
           <button class="close-drawer-btn" @click="drawer=false">×</button>
           <div class="auther-info">
@@ -139,6 +139,14 @@ export default {
       height: 100%;
       overflow-y: auto;
       min-width: 420px;
+    }
+
+    .drawer-inner {
+      /* background: url('../../../assets/img/my_future.jpg') no-repeat right bottom; */
+      background: linear-gradient(to bottom right,rgba(255,255,255,1), rgba(255,255,255,0)),url(../../../assets/img/my_future.jpg);
+      /* background-size: auto 45%; */
+      background-position: right bottom;
+      background-repeat: no-repeat;
     }
 
     .center-menu-drawer {
