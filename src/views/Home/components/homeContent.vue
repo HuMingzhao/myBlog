@@ -14,7 +14,7 @@
         <div class="center-menu-drawer">
           <button class="close-drawer-btn" @click="drawer=false">×</button>
           <div class="auther-info">
-            <img class="auther-avatar" src="https://img.cdn.heanny.cn/ww_200.gif" />
+            <img class="auther-avatar" src="https://thirdqq.qlogo.cn/g?b=oidb&k=UbNEiajdXXAUgiamgTNEBhFg&s=100&t=1483330474" />
             <span class="auther-name">HMZ</span>
             <span class="auther-programer-type">web</span>
             <button class="auther-contact" @click="handleContactMe">CONTACT ME</button>
@@ -33,7 +33,7 @@
           <ul>
             <li class="post-item" v-for="(item, index) in items" :key="index">
               <div class="post-item-content">
-                <img class="post-avatar" src="https://cdn.heanny.cn/HeadPortrait/moren.gif">
+                <img class="post-avatar" src="">
                 <div class="post-right">
                   <p class="post-content">
                     Apache 配置https及强制使用443端,Apache 配置https及强制使用443端,Apache 配置https及强制使用443端，Apache 配置https及强制使用443端
@@ -142,11 +142,11 @@ export default {
     }
 
     .drawer-inner {
-      /* background: url('../../../assets/img/my_future.jpg') no-repeat right bottom; */
       background: linear-gradient(to bottom right,rgba(255,255,255,1), rgba(255,255,255,0)),url(../../../assets/img/my_future.jpg);
-      /* background-size: auto 45%; */
+      background-size: auto 100%;
       background-position: right bottom;
       background-repeat: no-repeat;
+      min-height: 100%;
     }
 
     .center-menu-drawer {
