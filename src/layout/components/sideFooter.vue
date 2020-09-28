@@ -13,22 +13,25 @@ export default {
   name: 'sideFooter',
   data () {
     return {
-      icons: [{
-        class: 'icon-qq',
-        url: 'javascript:void(0)'
-      }, {
-        class: 'icon-weibo',
-        url: 'javascript:void(0)'
-      }, {
-        class: 'icon-twitter',
-        url: 'javascript:void(0)'
-      }, {
-        class: 'icon-github',
-        url: 'https://github.com/HuMingzhao'
-      }, {
-        class: 'icon-185078emailmailstreamline',
-        url: 'mailto:821547297@qq.com'
-      }]
+      icons: [
+      // {
+      //   class: 'icon-twitter',
+      //   url: 'javascript:void(0)'
+      // },
+        {
+          class: 'icon-qq',
+          url: 'javascript:void(0)'
+        },
+        {
+          class: 'icon-weibo',
+          url: 'javascript:void(0)'
+        }, {
+          class: 'icon-github',
+          url: 'https://github.com/HuMingzhao'
+        }, {
+          class: 'icon-185078emailmailstreamline',
+          url: 'mailto:821547297@qq.com'
+        }]
     }
   }
 }

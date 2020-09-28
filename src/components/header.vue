@@ -1,11 +1,9 @@
 <template>
     <header class="share-header">
       <h1 class="share-header-logo">
-          <a href="#">
-              <img src="" alt="Tu"/>
-          </a>
+          <a href="javascript:;">Tu</a>
       </h1>
-      <p class="site-desc">hmz.com</p>
+      <p class="site-desc">mingzhao.fun</p>
       <nav class="share-nav-container">
           <div class="nav-toggle">
           </div>

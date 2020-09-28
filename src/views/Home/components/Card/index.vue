@@ -17,7 +17,7 @@
                 <div class="card-meta">
                     <div class="card-meta-author">
                         By
-                        <i class="el-icon-time"></i>
+                        <i class="el-icon-user-solid"></i>
                         <a class="meta-author-link" href="javascript:;">Sugar</a>
                     </div>
                     <div class="card-meta-date">

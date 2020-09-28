@@ -20,14 +20,14 @@
             <button class="auther-contact" @click="handleContactMe">CONTACT ME</button>
           </div>
 
-          <h3><span>Wechat & QQ</span></h3>
-          <ul>
+          <!-- <h3><span>Wechat & QQ</span></h3> -->
+          <!-- <ul>
             <li class="post-item" v-for="(item, index) in items" :key="index">
               <div class="post-item-content">
                 <img src="" alt="Wechat">
               </div>
             </li>
-          </ul>
+          </ul> -->
 
           <!-- <h3><span>Popular Posts</span></h3>
           <ul>
