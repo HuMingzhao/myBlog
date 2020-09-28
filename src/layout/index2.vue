@@ -5,6 +5,7 @@
             <m-header />
            <app-main ref="appMain"/>
         </main>
+        <mFooter />
     </div>
   </template>
 
@@ -12,12 +13,14 @@
 import leftBar from '@/components/leftBar.vue'
 import mHeader from '@/components/header.vue'
 import AppMain from './components/appMain.vue'
+import mFooter from '@/components/footer.vue'
 export default {
   name: 'layout2',
   components: {
     leftBar,
     mHeader,
-    AppMain
+    AppMain,
+    mFooter
   }
 }
 </script>

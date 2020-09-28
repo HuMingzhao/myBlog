@@ -76,6 +76,7 @@ export default {
     .home-container {
       position: relative;
       padding: 100px 95px;
+      padding-bottom: 0;
     }
 
     .side-menu-wrapper {
