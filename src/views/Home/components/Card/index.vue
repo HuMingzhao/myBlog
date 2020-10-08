@@ -3,8 +3,8 @@
         <li class="card-item">
             <div class="card-item-left">
                 <div class="card-category">
-                    <a href="#">2020-blog</a>
-                    <a href="#">学习笔记</a>
+                    <a href="javascript:;">2020-blog</a>
+                    <a href="javascript:;">学习笔记</a>
                 </div>
                 <h3 class="card-title text-overflow">
                     <a href="/hmzblog/blog/">

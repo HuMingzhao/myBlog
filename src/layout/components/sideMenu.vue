@@ -1,21 +1,22 @@
 <template>
       <el-menu
-        default-active="2"
+        default-active="/home"
         class="el-menu-vertical-demo"
+        router
         @open="handleOpen"
         @close="handleClose">
-        <el-menu-item index="1">
+        <el-menu-item index="/home">
           <i class="el-icon-s-home"></i>
           <!-- <span slot="title">HOME</span> -->
-          <span slot="title"><router-link to="/home">HOME</router-link></span>
+          <span slot="title">Home</span>
         </el-menu-item>
         <!-- <el-menu-item index="2">
           <i class="el-icon-edit"></i>
           <span slot="title">BLOG</span>
         </el-menu-item> -->
-        <el-menu-item index="3">
+        <el-menu-item index="/gallery">
           <i class="el-icon-film"></i>
-          <span slot="title"><router-link to="/gallery">GALLERIES</router-link></span>
+          <span slot="title">Gallery</span>
         </el-menu-item>
         <!-- <el-menu-item index="4">
           <i class="el-icon-share"></i>
@@ -29,10 +30,10 @@
             <i class="el-icon-link"></i>
             <span slot="title">LINK</span>
         </el-menu-item> -->
-        <el-menu-item index="7">
+        <!--<el-menu-item index="/resume">
             <i class="el-icon-setting"></i>
-            <span slot="title"><router-link to="/resume">ABOUT ME</router-link></span>
-        </el-menu-item>
+            <span slot="title">About me</span>
+        </el-menu-item>-->
         <!-- <el-menu-item index="4">
             <i class="el-icon-user-solid"></i>
             <span slot="title" @click="$store.commit('SET_SHOW_LOGIN', true);">LOG IN</span>

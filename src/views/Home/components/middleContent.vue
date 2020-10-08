@@ -3,7 +3,7 @@
     <div class="carousel-wrapper">
       <el-carousel ref="carousel" @change="handleChangeCarousel" arrow="always" indicator-position="none" :height="carouselHeight + 'px'" :autoplay="false">
         <el-carousel-item>
-           <img width="100%" src="@assets/img/sky1.jpg" />
+           <img width="100%" src="https://img3.doubanio.com/view/photo/l/public/p2382636802.webp" />
            <transition name="fade">
             <div v-if="currentIndex===0" class="carousel-text" style="background-color: #fff;position: absolute;">
               Yesterday i saw a lion kiss a deer
@@ -11,7 +11,7 @@
            </transition>
         </el-carousel-item>
         <el-carousel-item>
-           <img width="100%" src="@assets/img/city.webp" />
+           <img width="100%" src="https://img9.doubanio.com/view/photo/l/public/p2382636776.webp" />
            <transition name="fade">
             <div v-if="currentIndex===1" class="carousel-text" style="background-color: #fff;position: absolute;">
               City of stars are you shining just for me ?
@@ -19,7 +19,7 @@
            </transition>
         </el-carousel-item>
         <el-carousel-item>
-           <img width="100%" src="@assets/img/sky2.jpg" />
+           <img width="100%" src="https://img9.doubanio.com/view/photo/l/public/p2005722865.webp" />
            <transition name="fade">
             <div v-if="currentIndex===2" class="carousel-text" style="background-color: #fff;position: absolute;">
               云在半空中 被微风剪碎
@@ -49,7 +49,7 @@ export default {
         url: '../../../assets/img/sky1.webp',
         name: '2'
       }, {
-        url: '../../../assets/img/sky2.webp',
+        url: 'https://img9.doubanio.com/view/photo/l/public/p2005722865.webp',
         name: '3'
       }],
       currentIndex: ''

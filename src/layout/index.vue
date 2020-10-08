@@ -14,8 +14,8 @@
            </div>
 
            <div class="user-name">sugar</div> -->
-           <audio src=""></audio>
-           <i class="iconfont icon-MusicEntertainment" @click="handleMusicClick"></i>
+           <audio src="http://m10.music.126.net/20201004125348/e3639c57f1d7180353ba6067b49c47fb/ymusic/7096/cafa/51d1/d137f51d063c926cec569c7e3a991d8b.mp3"></audio>
+           <i class="iconfont icon-MusicEntertainment music-stop" @click="handleMusicClick"></i>
         </div>
 
         <div class="toggle-wrap">
@@ -48,7 +48,6 @@ export default {
   },
   mounted () {
     this.video = document.getElementsByTagName('audio')[0]
-    this.video.play()
   },
   methods: {
     handleToggleClick () {
@@ -56,11 +55,7 @@ export default {
     },
     handleMusicClick () {
       document.querySelector('.icon-MusicEntertainment').classList.toggle('music-stop')
-      if (this.video.paused) {
-        this.video.play()
-      } else {
-        this.video.pause()
-      }
+      this.video.paused ? this.video.play() : this.video.pause()
     }
   }
 }

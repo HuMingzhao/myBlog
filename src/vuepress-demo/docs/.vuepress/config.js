@@ -5,7 +5,7 @@ module.exports = {
     head: [
         ['link', {
             rel: 'icon',
-            href: `/favicon.ico`
+            href: `http://www.mingzhao.fun/favicon.png`
         }]
     ],
     dest: './docs/.vuepress/dist',
@@ -13,9 +13,8 @@ module.exports = {
     evergreen: true,
     themeConfig: {
         nav: [
-          { text: 'Home', link: 'http://106.52.168.22/#/home' },
-          { text: 'Galleries', link: 'http://106.52.168.22/#/gallery/pic' },
-          { text: 'About Me', link: 'http://106.52.168.22/#/resume' },
+          { text: 'Home', link: 'http://www.mingzhao.fun', target:'_self', rel:'' },
+          { text: 'Gallery', link: 'http://www.mingzhao.fun/#/gallery/pic', target:'_self', rel:'' }
         ],
         sidebarDepth: 2,
         sidebar: [
