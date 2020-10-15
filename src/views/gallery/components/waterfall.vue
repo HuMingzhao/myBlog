@@ -20,37 +20,37 @@ export default {
       goods: [],
       items: [{
         order: '1',
-        imgUrl: 'https://img1.doubanio.com/view/photo/l/public/p2503003759.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_1.jpg'
       }, {
         order: '2',
-        imgUrl: 'https://img2.doubanio.com/view/photo/l/public/p1514180043.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_2.jpg'
       }, {
         order: '3',
-        imgUrl: 'https://img1.doubanio.com/view/photo/l/public/p2381631408.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_3.jpg'
       }, {
         order: '4',
-        imgUrl: 'https://img1.doubanio.com/view/photo/l/public/p1259692789.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_4.jpg'
       }, {
         order: '5',
-        imgUrl: 'https://img9.doubanio.com/view/photo/l/public/p2595298496.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_5.jpg'
       }, {
         order: '6',
-        imgUrl: 'https://img3.doubanio.com/view/photo/l/public/p2550927931.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_6.jpg'
       }, {
         order: '7',
-        imgUrl: 'https://img1.doubanio.com/view/photo/l/public/p681141767.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_7.jpg'
       }, {
         order: '8',
-        imgUrl: 'https://img1.doubanio.com/view/photo/l/public/p2293569209.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_8.jpg'
       }, {
         order: '9',
-        imgUrl: 'https://img9.doubanio.com/view/photo/l/public/p2395677306.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_9.jpg'
       }, {
         order: '10',
-        imgUrl: 'https://img9.doubanio.com/view/photo/l/public/p1990574015.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_10.jpg'
       }, {
         order: '11',
-        imgUrl: 'https://img3.doubanio.com/view/photo/l/public/p1891801030.webp'
+        imgUrl: 'http://cdn.mingzhao.fun/assets/img/gallery_11.jpg'
       }]
     }
   },

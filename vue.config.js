@@ -5,7 +5,7 @@ module.exports = {
   assetsDir: 'assets',
   productionSourceMap: false,
   devServer: {
-    host: '192.168.0.107',
+    host: '10.10.10.119',
     port: 3636
   },
   configureWebpack: config => {
