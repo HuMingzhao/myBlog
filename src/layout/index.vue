@@ -14,7 +14,7 @@
            </div>
 
            <div class="user-name">sugar</div> -->
-           <audio src="http://m10.music.126.net/20201004125348/e3639c57f1d7180353ba6067b49c47fb/ymusic/7096/cafa/51d1/d137f51d063c926cec569c7e3a991d8b.mp3"></audio>
+           <audio src="http://cdn.mingzhao.fun/assets/audio/chunxiaqiudong.mp3"></audio>
            <i class="iconfont icon-MusicEntertainment music-stop" @click="handleMusicClick"></i>
         </div>
 
