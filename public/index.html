@@ -8,9 +8,13 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <style>
       .container {
-        width: 100vw;
-        height: 100vh;
         display: flex;
+        position: fixed;
+        z-index: 20202;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
         align-items: center;
         justify-content: center;
       }
@@ -62,12 +66,10 @@
     <script>
       var _LoadingHtml = `<div id="loadingDiv" class="container"><div class="animate two"><span>H</span><span>M</span><span>Z</span> &nbsp;<span>B</span><span>L</span><span>O</span><span>G</span></div></div>`
       document.write(_LoadingHtml);
-      document.onreadystatechange = completeLoading;
+      document.addEventListener('DOMContentLoaded', completeLoading);
       function completeLoading() {
-          if (document.readyState == "complete") {
               var loadingMask = document.getElementById('loadingDiv');
               loadingMask.parentNode.removeChild(loadingMask);
-          }
       }
     </script>
   </head>
