@@ -13,10 +13,10 @@
                       <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="/hmzblog/blog/">Blog</a>
+                    <a href="/hmzblog/1">Blog</a>
                   </li>
                   <li>
-                    <a href="/#/resume">About Me</a>
+                    <a href="javascript:;">About Me</a>
                   </li>
               </ul>
           </div>
