@@ -19,10 +19,10 @@ module.exports = {
         sidebarDepth: 2,
         sidebar: [
             {
-              title: '项目上线',
+              title: '',
               collapsable: false,
-              children: ['/blog/']
-            }         
+              children: ['/1/', '/2/']
+            }       
         ],
         lastUpdated: 'Last Updated',
         smoothScroll: true

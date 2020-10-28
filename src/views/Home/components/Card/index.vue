@@ -7,7 +7,7 @@
                     <a href="javascript:;">学习笔记</a>
                 </div>
                 <h3 class="card-title text-overflow">
-                    <a href="/hmzblog/blog/">
+                    <a href="/hmzblog/1">
                         <span class="Recommend">【推荐】</span>【NGINX】项目上线
                     </a>
                 </h3>
@@ -32,8 +32,42 @@
             </div>
 
             <div class="card-item-right">
-                <a class="card-featured-img" href="/hmzblog/blog/">
+                <a class="card-featured-img" href="/hmzblog/1">
                    <img src="@assets/img/timg.jpg" />
+                </a>
+            </div>
+        </li>
+
+        <li class="card-item">
+            <div class="card-item-left">
+                <div class="card-category">
+                    <a href="javascript:;">2020-blog</a>
+                    <a href="javascript:;">学习笔记</a>
+                </div>
+                <h3 class="card-title text-overflow">
+                    <a href="/hmzblog/2">
+                        <span class="Recommend">【推荐】</span> 文件上传
+                    </a>
+                </h3>
+                <div class="card-content">
+                  <p>大数据文件上传</p>
+                </div>
+                <div class="card-meta">
+                    <div class="card-meta-author">
+                        By
+                        <i class="el-icon-user-solid"></i>
+                        <a class="meta-author-link" href="javascript:;">Sugar</a>
+                    </div>
+                    <div class="card-meta-date">
+                        <i class="el-icon-time"></i>
+                        <a href="javascript:;" title="5月前">2020/10/28</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-item-right">
+                <a class="card-featured-img" href="/hmzblog/2">
+                   <img src="@assets/img/upload.jpg" />
                 </a>
             </div>
         </li>
